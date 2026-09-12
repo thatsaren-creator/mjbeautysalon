@@ -1,0 +1,1204 @@
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MJ Beauty Saloon | İzmir Alsancak Güzellik & Cilt Bakım Salonu</title>
+<meta name="description" content="İzmir Alsancak'ta MJ Beauty Saloon: profesyonel cilt bakımı, kalıcı makyaj, ipek kirpik ve epilasyon hizmetleri. %100 steril ortam, uzman estetisyen kadrosu." />
+<meta name="theme-color" content="#2B232A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          rose:  '#F4E8EB',
+          nude:  '#E8D5C4',
+          gold:  '#D4AF37',
+          rosegold: '#E0A96D',
+          ink:   '#2B232A',
+          cream: '#FAFAFA'
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'Georgia', 'serif'],
+          body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+        },
+        boxShadow: {
+          soft: '0 18px 50px -20px rgba(43,35,42,.25)',
+          gold: '0 14px 40px -16px rgba(212,175,55,.55)'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root{
+    --rose:#F4E8EB;
+    --nude:#E8D5C4;
+    --gold:#D4AF37;
+    --rosegold:#E0A96D;
+    --ink:#2B232A;
+  }
+  html{ -webkit-tap-highlight-color: transparent; }
+  body{
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+    background:#FAFAFA;
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--nude); color:var(--ink); }
+
+  section[id]{ scroll-margin-top: 92px; }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform: translateY(30px);
+    transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible{ opacity:1; transform:none; }
+
+  /* ---------- Decorative ---------- */
+  .grain{
+    background-image: radial-gradient(rgba(43,35,42,.055) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .gold-line{
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .text-gradient-gold{
+    background: linear-gradient(100deg,#D4AF37 0%,#E0A96D 45%,#D4AF37 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .underline-hover{
+    position:relative;
+  }
+  .underline-hover::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:-6px;
+    height:2px; width:0;
+    background:linear-gradient(90deg,var(--gold),var(--rosegold));
+    transition:width .35s cubic-bezier(.22,1,.36,1);
+    border-radius:2px;
+  }
+  .underline-hover:hover::after,
+  .underline-hover.is-active::after{ width:100%; }
+
+  .nav-link.is-active{ color:#2B232A; font-weight:600; }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    font-weight:600; letter-spacing:.01em;
+    border-radius:9999px;
+    transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .btn:active{ transform: translateY(1px) scale(.99); }
+  .btn-primary{
+    background:linear-gradient(120deg,#2B232A 0%,#3b3038 100%);
+    color:#fff;
+    box-shadow:0 16px 34px -18px rgba(43,35,42,.9);
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 22px 44px -18px rgba(43,35,42,.9); }
+  .btn-gold{
+    background:linear-gradient(120deg,#D4AF37 0%,#E0A96D 100%);
+    color:#2B232A;
+    box-shadow:0 16px 36px -18px rgba(212,175,55,.95);
+  }
+  .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 22px 44px -18px rgba(212,175,55,.95); }
+  .btn-outline{
+    border:1.5px solid rgba(43,35,42,.18);
+    background:rgba(255,255,255,.72);
+    color:#2B232A;
+    backdrop-filter: blur(6px);
+  }
+  .btn-outline:hover{
+    border-color:var(--gold);
+    background:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 18px 36px -22px rgba(43,35,42,.55);
+  }
+  .btn-ghost{
+    color:#2B232A;
+    border:1.5px solid rgba(212,175,55,.45);
+    background:rgba(244,232,235,.5);
+  }
+  .btn-ghost:hover{ background:#fff; border-color:var(--gold); transform:translateY(-2px); }
+
+  /* ---------- Cards ---------- */
+  .lux-card{
+    background:#fff;
+    border:1px solid rgba(43,35,42,.07);
+    transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease, border-color .45s ease;
+  }
+  .lux-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(212,175,55,.45);
+    box-shadow:0 30px 60px -30px rgba(43,35,42,.35);
+  }
+
+  /* ---------- Mobile action bar ---------- */
+  #mobileBar{
+    transition: transform .4s cubic-bezier(.22,1,.36,1), opacity .35s ease;
+  }
+  #mobileBar.is-hidden{
+    transform: translateY(120%);
+    opacity:0;
+    pointer-events:none;
+  }
+
+  /* ---------- Mobile menu ---------- */
+  #mobileMenu{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height .5s cubic-bezier(.22,1,.36,1), opacity .35s ease;
+    opacity:0;
+  }
+  #mobileMenu.is-open{
+    max-height:520px;
+    opacity:1;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* Floating gentle animation for hero badge */
+  @keyframes floaty{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+  }
+  .floaty{ animation: floaty 6s ease-in-out infinite; }
+  .floaty-slow{ animation: floaty 8s ease-in-out infinite; }
+</style>
+</head>
+<body class="font-body antialiased bg-cream text-ink">
+
+<!-- ============================================
+     HEADER / NAVBAR
+============================================ -->
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 border-b border-transparent transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[72px] lg:h-[84px]">
+
+      <!-- Logo -->
+      <a href="#top" class="flex items-center gap-3 group shrink-0">
+        <span class="relative grid place-items-center w-11 h-11 rounded-full bg-ink ring-1 ring-gold/60 shadow-[0_10px_25px_-12px_rgba(43,35,42,.9)] transition-transform duration-500 group-hover:scale-105">
+          <span class="font-display text-[15px] leading-none text-gradient-gold font-semibold tracking-tight">MJ</span>
+          <span class="absolute -inset-[3px] rounded-full border border-gold/25"></span>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-display text-[19px] lg:text-[21px] font-semibold tracking-tight">
+            <span class="text-gradient-gold">MJ</span> <span class="text-ink">Beauty Saloon</span>
+          </span>
+          <span class="hidden sm:block text-[10px] uppercase tracking-[0.32em] text-ink/45">Alsancak · İzmir</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Ana menü">
+        <a href="#hakkimizda" class="nav-link underline-hover text-[14.5px] font-medium text-ink/70 transition-colors hover:text-ink">Hakkımızda</a>
+        <a href="#hizmetler" class="nav-link underline-hover text-[14.5px] font-medium text-ink/70 transition-colors hover:text-ink">Hizmetler</a>
+        <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener" class="nav-link underline-hover text-[14.5px] font-medium text-ink/70 transition-colors hover:text-ink">Instagram</a>
+        <a href="#yorumlar" class="nav-link underline-hover text-[14.5px] font-medium text-ink/70 transition-colors hover:text-ink">Müşteri Yorumları</a>
+        <a href="#iletisim" class="nav-link underline-hover text-[14.5px] font-medium text-ink/70 transition-colors hover:text-ink">İletişim</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+           class="btn btn-primary px-5 py-3 text-[13.5px]">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+          </svg>
+          WhatsApp Randevu
+        </a>
+        <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener"
+           class="btn btn-outline px-5 py-3 text-[13.5px]">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+            <circle cx="12" cy="12" r="4.1"/>
+            <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuToggle" type="button"
+        class="lg:hidden grid place-items-center w-11 h-11 rounded-full border border-ink/12 bg-white/80 backdrop-blur transition-colors hover:border-gold/70"
+        aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="relative block w-5 h-[14px]">
+          <span class="menu-bar absolute left-0 top-0 h-[2px] w-5 rounded bg-ink transition-all duration-300"></span>
+          <span class="menu-bar absolute left-0 top-[6px] h-[2px] w-5 rounded bg-ink transition-all duration-300"></span>
+          <span class="menu-bar absolute left-0 top-[12px] h-[2px] w-5 rounded bg-ink transition-all duration-300"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="lg:hidden">
+      <div class="mb-4 rounded-3xl border border-ink/8 bg-white/95 backdrop-blur-xl p-5 shadow-soft">
+        <nav class="flex flex-col divide-y divide-ink/6">
+          <a href="#hakkimizda" class="mobile-nav-link py-3.5 text-[15px] font-medium text-ink/75 flex items-center justify-between">
+            Hakkımızda <span class="text-gold/70">→</span>
+          </a>
+          <a href="#hizmetler" class="mobile-nav-link py-3.5 text-[15px] font-medium text-ink/75 flex items-center justify-between">
+            Hizmetler <span class="text-gold/70">→</span>
+          </a>
+          <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener" class="mobile-nav-link py-3.5 text-[15px] font-medium text-ink/75 flex items-center justify-between">
+            Instagram <span class="text-gold/70">↗</span>
+          </a>
+          <a href="#yorumlar" class="mobile-nav-link py-3.5 text-[15px] font-medium text-ink/75 flex items-center justify-between">
+            Müşteri Yorumları <span class="text-gold/70">→</span>
+          </a>
+          <a href="#iletisim" class="mobile-nav-link py-3.5 text-[15px] font-medium text-ink/75 flex items-center justify-between">
+            İletişim <span class="text-gold/70">→</span>
+          </a>
+        </nav>
+        <div class="mt-5 grid grid-cols-2 gap-3">
+          <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+             class="btn btn-primary py-3.5 text-[13px]">
+            <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+            Randevu
+          </a>
+          <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener"
+             class="btn btn-outline py-3.5 text-[13px]">
+            <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+              <circle cx="12" cy="12" r="4.1"/>
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================
+     HERO
+============================================ -->
+<section class="relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-28">
+  <!-- decorative background -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-rose/70 via-cream to-cream"></div>
+    <div class="absolute -top-40 -right-28 h-[460px] w-[460px] rounded-full bg-gradient-to-br from-nude/80 to-rose blur-3xl opacity-70"></div>
+    <div class="absolute top-52 -left-40 h-[420px] w-[420px] rounded-full bg-gold/10 blur-3xl"></div>
+    <div class="absolute inset-0 grain opacity-60"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+
+      <!-- LEFT: content -->
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2.5 rounded-full border border-gold/35 bg-white/70 px-4 py-2 backdrop-blur">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold/70"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-gold"></span>
+          </span>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink/70">Alsancak · Konak / İzmir</span>
+        </div>
+
+        <h1 class="mt-7 font-display text-[36px] leading-[1.12] font-semibold tracking-tight text-ink sm:text-[46px] lg:text-[58px]">
+          İzmir Alsancak'ta Cildinize Ve Güzelliğinize
+          <span class="relative inline-block">
+            <span class="text-gradient-gold italic">Lüks Bir Dokunuş</span>
+            <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 300 10" fill="none" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M2 7C60 2 150 2 298 6" stroke="#E0A96D" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="mt-7 max-w-xl text-[15.5px] leading-relaxed text-ink/65 sm:text-[16.5px]">
+          Profesyonel cilt bakımı, kalıcı makyaj, epilasyon ve kişiye özel estetik çözümlerimizle
+          doğal güzelliğinizi ve ışıltınızı ortaya çıkarın.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20hizli%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+             class="btn btn-gold px-6 py-4 text-[14px]">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+            Hızlı WhatsApp Randevu
+          </a>
+
+          <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener"
+             class="btn btn-outline px-6 py-4 text-[14px]">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+              <circle cx="12" cy="12" r="4.1"/>
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram Profili
+          </a>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=MJ+Beauty+Saloon+Alsancak+Izmir" target="_blank" rel="noopener"
+             class="btn btn-ghost px-6 py-4 text-[14px]">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="2.6"/>
+            </svg>
+            Yol Tarifi Al
+          </a>
+        </div>
+
+        <!-- Trust stats -->
+        <div class="mt-11 grid max-w-xl grid-cols-3 gap-4 border-t border-ink/8 pt-7">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display text-[24px] font-semibold text-ink">5.0</span>
+              <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+            </div>
+            <p class="mt-1 text-[11.5px] uppercase tracking-[0.14em] text-ink/45">Google Puanı</p>
+          </div>
+          <div>
+            <div class="font-display text-[24px] font-semibold text-ink">%100</div>
+            <p class="mt-1 text-[11.5px] uppercase tracking-[0.14em] text-ink/45">Steril Ortam</p>
+          </div>
+          <div>
+            <div class="font-display text-[24px] font-semibold text-ink">+1500</div>
+            <p class="mt-1 text-[11.5px] uppercase tracking-[0.14em] text-ink/45">Mutlu Müşteri</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: image -->
+      <div class="reveal relative" style="transition-delay:.15s">
+        <!-- frame accents -->
+        <div class="absolute -top-5 -left-5 hidden h-24 w-24 rounded-tl-[28px] border-t-2 border-l-2 border-gold/50 sm:block"></div>
+        <div class="absolute -bottom-5 -right-5 hidden h-24 w-24 rounded-br-[28px] border-b-2 border-r-2 border-gold/50 sm:block"></div>
+
+        <div class="relative overflow-hidden rounded-[28px] shadow-soft ring-1 ring-gold/25">
+          <img
+            src="https://www.designarena.ai/u/e583d82a-d2b4-4bc9-ac29-bfae2b8bd1d8"
+            alt="MJ Beauty Saloon Alsancak İzmir'de lüks ve steril güzellik salonu iç mekanı"
+            class="h-[420px] w-full object-cover sm:h-[520px] lg:h-[600px]"
+            loading="eager" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/5 to-transparent"></div>
+
+          <!-- bottom label -->
+          <div class="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3 rounded-2xl border border-white/20 bg-ink/45 px-4 py-3 backdrop-blur-md">
+            <div>
+              <p class="font-display text-[15px] font-semibold text-white">MJ Beauty Saloon</p>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-white/65">Alsancak · İzmir</p>
+            </div>
+            <span class="grid h-9 w-9 place-items-center rounded-full bg-gold text-ink">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- floating badge -->
+        <div class="floaty absolute -left-3 top-10 hidden rounded-2xl border border-ink/8 bg-white/95 px-4 py-3 shadow-soft backdrop-blur sm:block lg:-left-8">
+          <p class="text-[10.5px] uppercase tracking-[0.18em] text-ink/45">Uzman Kadro</p>
+          <p class="mt-0.5 font-display text-[15px] font-semibold text-ink">Estetisyen Ekibi</p>
+        </div>
+        <div class="floaty-slow absolute -right-3 bottom-24 hidden rounded-2xl border border-ink/8 bg-white/95 px-4 py-3 shadow-soft backdrop-blur sm:block lg:-right-7">
+          <p class="text-[10.5px] uppercase tracking-[0.18em] text-ink/45">Hijyen</p>
+          <p class="mt-0.5 font-display text-[15px] font-semibold text-ink">%100 Steril</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HAKKIMIZDA
+============================================ -->
+<section id="hakkimizda" class="relative py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+    <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <!-- image -->
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="absolute -inset-4 -z-10 rounded-[36px] bg-gradient-to-br from-rose via-nude/40 to-transparent opacity-70 blur-2xl"></div>
+        <div class="overflow-hidden rounded-[26px] shadow-soft ring-1 ring-ink/5">
+          <img
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80"
+            alt="Profesyonel cilt bakımı uygulaması yapan uzman estetisyen"
+            class="h-[360px] w-full object-cover sm:h-[460px] lg:h-[540px]"
+            loading="lazy" />
+        </div>
+        <div class="absolute -bottom-6 right-4 rounded-2xl border border-gold/25 bg-white px-5 py-4 shadow-soft sm:right-8">
+          <p class="font-display text-[26px] font-semibold leading-none text-gradient-gold">7+</p>
+          <p class="mt-1 text-[11px] uppercase tracking-[0.18em] text-ink/50">Yıl Deneyim</p>
+        </div>
+      </div>
+
+      <!-- text -->
+      <div class="reveal order-1 lg:order-2" style="transition-delay:.1s">
+        <p class="text-[11.5px] font-semibold uppercase tracking-[0.3em] text-gold">Hakkımızda</p>
+        <h2 class="mt-4 font-display text-[30px] leading-tight font-semibold tracking-tight text-ink sm:text-[38px]">
+          Alsancak'ın Konforlu Atmosferinde <span class="italic text-gradient-gold">Premium Bakım</span>
+        </h2>
+        <div class="my-7 h-px w-24 gold-line"></div>
+        <p class="text-[15.5px] leading-relaxed text-ink/65">
+          MJ Beauty Saloon olarak İzmir Alsancak'ta; ferah, steril ve konforlu salon ortamımızda
+          cildinizin ihtiyaçlarını doğru analiz eden bir yaklaşım benimsiyoruz. Her müşterimiz için
+          kişiye özel bakım protokolleri oluşturuyor, uygulamalarımızda yalnızca onaylı ve
+          dermatolojik olarak güvenli ürünler kullanıyoruz.
+        </p>
+        <p class="mt-5 text-[15.5px] leading-relaxed text-ink/65">
+          Uzman estetisyen kadromuz; cilt bakımı, kalıcı makyaj, ipek kirpik ve epilasyon
+          hizmetlerinde doğal sonuçları hedefler. Amacımız, kendinizi salonumuzdan çıkarken
+          daha ışıltılı ve özgüvenli hissetmenizdir.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+             class="btn btn-primary px-6 py-3.5 text-[13.5px]">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+            WhatsApp'tan Yazın
+          </a>
+          <a href="#hizmetler" class="btn btn-outline px-6 py-3.5 text-[13.5px]">Hizmetleri İncele</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 feature cards -->
+    <div class="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal lux-card rounded-3xl p-7">
+        <span class="grid h-12 w-12 place-items-center rounded-2xl bg-rose text-ink/80 ring-1 ring-gold/20">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.6"/>
+            <path d="M4.8 20a7.2 7.2 0 0 1 14.4 0" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-[18px] font-semibold text-ink">Uzman Estetisyen Kadrosu</h3>
+        <p class="mt-2.5 text-[14px] leading-relaxed text-ink/60">Sertifikalı ve deneyimli estetisyenlerle güvenli, profesyonel uygulamalar.</p>
+      </div>
+
+      <div class="reveal lux-card rounded-3xl p-7" style="transition-delay:.08s">
+        <span class="grid h-12 w-12 place-items-center rounded-2xl bg-rose text-ink/80 ring-1 ring-gold/20">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M12 3l7 3v5.2c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6l7-3z" stroke-linejoin="round"/>
+            <path d="M9 12.2l2.1 2.1L15.2 10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-[18px] font-semibold text-ink">%100 Steril &amp; Hijyenik Salon</h3>
+        <p class="mt-2.5 text-[14px] leading-relaxed text-ink/60">Tek kullanımlık malzeme ve düzenli sterilizasyon protokolleriyle hijyen önceliğimiz.</p>
+      </div>
+
+      <div class="reveal lux-card rounded-3xl p-7" style="transition-delay:.16s">
+        <span class="grid h-12 w-12 place-items-center rounded-2xl bg-rose text-ink/80 ring-1 ring-gold/20">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M12 20.3S4 15.6 4 10.2A4.2 4.2 0 0 1 12 7.7a4.2 4.2 0 0 1 8 2.5c0 5.4-8 10.1-8 10.1z" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-[18px] font-semibold text-ink">Müşteri Memnuniyeti Odaklı</h3>
+        <p class="mt-2.5 text-[14px] leading-relaxed text-ink/60">Beklentinizi birebir dinleyip, sonuçtan memnun kalana kadar yanınızdayız.</p>
+      </div>
+
+      <div class="reveal lux-card rounded-3xl p-7" style="transition-delay:.24s">
+        <span class="grid h-12 w-12 place-items-center rounded-2xl bg-rose text-ink/80 ring-1 ring-gold/20">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M8 5h8M8 5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M8 5V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 11h6M9 14.5h4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-[18px] font-semibold text-ink">Kişiye Özel Bakım Protokolleri</h3>
+        <p class="mt-2.5 text-[14px] leading-relaxed text-ink/60">Cilt analizine göre planlanan, size özel bakım ve tedavi programları.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HİZMETLER
+============================================ -->
+<section id="hizmetler" class="relative overflow-hidden py-20 lg:py-28">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-cream via-rose/45 to-cream"></div>
+  <div class="pointer-events-none absolute -right-32 top-20 h-[380px] w-[380px] rounded-full bg-nude/40 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-[11.5px] font-semibold uppercase tracking-[0.3em] text-gold">Hizmetlerimiz</p>
+      <h2 class="mt-4 font-display text-[30px] leading-tight font-semibold tracking-tight text-ink sm:text-[40px]">
+        Size Özel <span class="italic text-gradient-gold">Güzellik Ritüelleri</span>
+      </h2>
+      <div class="mx-auto my-6 h-px w-24 gold-line"></div>
+      <p class="text-[15.5px] leading-relaxed text-ink/60">
+        Cilt bakımından kalıcı makyaja, epilasyondan kirpik tasarımına kadar tüm ihtiyaçlarınız
+        için tek adres. Detaylı bilgi ve fiyat listesi için bize WhatsApp'tan ulaşabilirsiniz.
+      </p>
+    </div>
+
+    <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card 1 -->
+      <article class="reveal lux-card group relative flex flex-col rounded-[28px] p-8">
+        <span class="absolute right-8 top-8 font-display text-[42px] font-semibold leading-none text-ink/5 transition-colors group-hover:text-gold/15">01</span>
+        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-ink to-[#3b3038] text-gold ring-1 ring-gold/25 shadow-[0_14px_30px_-16px_rgba(43,35,42,.9)]">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 3.2c2.7 3.5 4.6 6.2 4.6 8.7A4.6 4.6 0 0 1 12 16.5a4.6 4.6 0 0 1-4.6-4.6c0-2.5 1.9-5.2 4.6-8.7z" stroke-linejoin="round"/>
+            <path d="M7.5 19.5c2.8-1.5 6.2-1.5 9 0" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-6 font-display text-[21px] leading-snug font-semibold text-ink">Profesyonel &amp; Medikal Cilt Bakımı</h3>
+        <p class="mt-3 text-[14.5px] leading-relaxed text-ink/60">
+          Derinlemesine cilt temizliği, nem ve leke bakımları, anti-aging yenileme protokolleri.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-ink/65">
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Klasik &amp; derinlemesine temizlik
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Leke, akne ve gözenek bakımı
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Anti-aging yenileme seansları
+          </li>
+        </ul>
+        <a href="https://wa.me/5015510505?text=Merhaba,%20Cilt%20Bakimi%20hizmeti%20hakkinda%20detayli%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"
+           class="btn btn-outline mt-8 w-full py-3.5 text-[13px] group-hover:border-gold">
+          <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+          </svg>
+          WhatsApp ile Detaylı Bilgi Al
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="reveal lux-card group relative flex flex-col rounded-[28px] p-8" style="transition-delay:.1s">
+        <span class="absolute right-8 top-8 font-display text-[42px] font-semibold leading-none text-ink/5 transition-colors group-hover:text-gold/15">02</span>
+        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-ink to-[#3b3038] text-gold ring-1 ring-gold/25 shadow-[0_14px_30px_-16px_rgba(43,35,42,.9)]">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M2.6 12S6 5.8 12 5.8 21.4 12 21.4 12 18 18.2 12 18.2 2.6 12 2.6 12z" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="2.6"/>
+            <path d="M8.4 6.6L7.2 4.4M15.6 6.6l1.2-2.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-6 font-display text-[21px] leading-snug font-semibold text-ink">Kalıcı Makyaj &amp; Kirpik Tasarımı</h3>
+        <p class="mt-3 text-[14.5px] leading-relaxed text-ink/60">
+          İpek kirpik, kaş laminasyonu, dudak renklendirme ve kalıcı eyeliner uygulamaları.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-ink/65">
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            İpek kirpik &amp; lifting
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Kaş laminasyonu &amp; tasarımı
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Dudak renklendirme &amp; eyeliner
+          </li>
+        </ul>
+        <a href="https://wa.me/5015510505?text=Merhaba,%20Kalici%20Makyaj%20ve%20Kirpik%20Tasarimi%20hakkinda%20detayli%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"
+           class="btn btn-outline mt-8 w-full py-3.5 text-[13px] group-hover:border-gold">
+          <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+          </svg>
+          WhatsApp ile Detaylı Bilgi Al
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="reveal lux-card group relative flex flex-col rounded-[28px] p-8 md:col-span-2 lg:col-span-1" style="transition-delay:.2s">
+        <span class="absolute right-8 top-8 font-display text-[42px] font-semibold leading-none text-ink/5 transition-colors group-hover:text-gold/15">03</span>
+        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-ink to-[#3b3038] text-gold ring-1 ring-gold/25 shadow-[0_14px_30px_-16px_rgba(43,35,42,.9)]">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 3l1.9 4.2 4.6.5-3.4 3.1.9 4.5L12 13.2 7.9 15.3l.9-4.5-3.4-3.1 4.6-.5L12 3z" stroke-linejoin="round"/>
+            <path d="M18.5 17.5l.7 1.6 1.8.2-1.3 1.2.3 1.8-1.5-.9-1.6.9.4-1.8-1.4-1.2 1.9-.2.7-1.6z" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-6 font-display text-[21px] leading-snug font-semibold text-ink">Epilasyon &amp; Vücut Bakımı</h3>
+        <p class="mt-3 text-[14.5px] leading-relaxed text-ink/60">
+          Son teknoloji cihazlarla konforlu epilasyon ve vücut yenileme çözümleri.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-ink/65">
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Buz lazer epilasyon
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Vücut peeling &amp; yenileme
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="mt-[3px] w-4 h-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Bölgesel bakım programları
+          </li>
+        </ul>
+        <a href="https://wa.me/5015510505?text=Merhaba,%20Epilasyon%20ve%20Vucut%20Bakimi%20hakkinda%20detayli%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"
+           class="btn btn-outline mt-8 w-full py-3.5 text-[13px] group-hover:border-gold">
+          <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+          </svg>
+          WhatsApp ile Detaylı Bilgi Al
+        </a>
+      </article>
+    </div>
+
+    <!-- CTA band -->
+    <div class="reveal mt-12 overflow-hidden rounded-[28px] border border-gold/25 bg-white px-7 py-8 shadow-soft sm:px-10 sm:py-10">
+      <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+        <div>
+          <h3 class="font-display text-[22px] font-semibold text-ink sm:text-[26px]">Hangi hizmetin size uygun olduğundan emin değil misiniz?</h3>
+          <p class="mt-2 text-[14.5px] text-ink/60">Cildinizi birlikte analiz edelim, size en uygun bakım planını oluşturalım.</p>
+        </div>
+        <a href="https://wa.me/5015510505?text=Merhaba,%20cilt%20analizi%20ve%20uygun%20bakim%20plani%20icin%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+           class="btn btn-gold w-full shrink-0 px-7 py-4 text-[14px] sm:w-auto">
+          <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+          </svg>
+          Hemen Randevu Al
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     INSTAGRAM
+============================================ -->
+<section id="instagram" class="relative py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="reveal relative overflow-hidden rounded-[32px] border border-ink/8 bg-ink px-7 py-14 text-center sm:px-14 sm:py-20">
+      <!-- glow -->
+      <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-rosegold/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-28 -right-20 h-80 w-80 rounded-full bg-gold/20 blur-3xl"></div>
+      <div class="pointer-events-none absolute inset-0 opacity-[0.07]" style="background-image:radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px);background-size:22px 22px;"></div>
+
+      <div class="relative mx-auto max-w-2xl">
+        <span class="mx-auto grid h-20 w-20 place-items-center rounded-3xl bg-white/8 ring-1 ring-white/15 backdrop-blur">
+          <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+
+        <p class="mt-8 text-[11.5px] font-semibold uppercase tracking-[0.3em] text-gold">Sosyal Medya</p>
+        <h2 class="mt-4 font-display text-[28px] leading-tight font-semibold text-white sm:text-[38px]">
+          Uygulamalarımızı Instagram'da Keşfedin
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/60">
+          <span class="font-semibold text-white/85">@mj.beauttyy</span> hesabımızı takip ederek en güncel salon
+          ortamımızı, işlem detaylarını ve değişimleri inceleyebilirsiniz.
+        </p>
+
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener"
+             class="btn btn-gold w-full px-8 py-4 text-[14.5px] sm:w-auto">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+              <circle cx="12" cy="12" r="4.1"/>
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram'da Bizi Takip Edin
+          </a>
+          <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon,%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+             class="btn w-full border border-white/20 bg-white/8 px-8 py-4 text-[14.5px] text-white backdrop-blur transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:bg-white/12 sm:w-auto">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+            WhatsApp Randevu
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MÜŞTERİ YORUMLARI
+============================================ -->
+<section id="yorumlar" class="relative py-20 lg:py-28">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-cream via-rose/40 to-cream"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-[11.5px] font-semibold uppercase tracking-[0.3em] text-gold">Müşteri Yorumları</p>
+      <h2 class="mt-4 font-display text-[30px] leading-tight font-semibold tracking-tight text-ink sm:text-[40px]">
+        Bizi Tercih Edenlerin <span class="italic text-gradient-gold">Deneyimleri</span>
+      </h2>
+      <div class="mx-auto my-6 h-px w-24 gold-line"></div>
+    </div>
+
+    <!-- Google badge -->
+    <div class="reveal mx-auto mt-2 flex max-w-md items-center justify-between gap-5 rounded-3xl border border-ink/8 bg-white px-6 py-5 shadow-soft">
+      <div class="flex items-center gap-3.5">
+        <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        <div class="text-left">
+          <p class="font-display text-[17px] font-semibold leading-tight text-ink">Google Maps</p>
+          <p class="text-[12px] text-ink/50">MJ Beauty Saloon · Alsancak</p>
+        </div>
+      </div>
+      <div class="text-right">
+        <div class="flex items-center justify-end gap-1 text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+        </div>
+        <p class="mt-1 text-[12px] text-ink/55"><span class="font-display text-[16px] font-semibold text-ink">5.0</span> / 5.0 · 128+ yorum</p>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Review 1 -->
+      <figure class="reveal lux-card flex flex-col rounded-3xl p-7">
+        <div class="flex items-center gap-0.5 text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+        </div>
+        <blockquote class="mt-4 flex-1 text-[14.5px] leading-relaxed text-ink/70">
+          "Cilt bakımı için gittim, ilgileri ve profesyonellikleri harika. İşlem sonrası cildimdeki
+          farkı hemen gördüm. Salon çok ferah ve temiz."
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3 border-t border-ink/8 pt-5">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-rose font-display text-[14px] font-semibold text-ink">EY</span>
+          <span>
+            <span class="block text-[14px] font-semibold text-ink">Elif Y.</span>
+            <span class="block text-[11.5px] uppercase tracking-[0.14em] text-ink/40">Google Yorumu</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Review 2 -->
+      <figure class="reveal lux-card flex flex-col rounded-3xl p-7" style="transition-delay:.08s">
+        <div class="flex items-center gap-0.5 text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+        </div>
+        <blockquote class="mt-4 flex-1 text-[14.5px] leading-relaxed text-ink/70">
+          "Hijyen konusunda gerçekten çok titizler. Kullanılan tüm malzemelerin tek kullanımlık
+          olması beni çok rahatlattı. Kesinlikle tavsiye ederim."
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3 border-t border-ink/8 pt-5">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-nude/70 font-display text-[14px] font-semibold text-ink">MD</span>
+          <span>
+            <span class="block text-[14px] font-semibold text-ink">Merve D.</span>
+            <span class="block text-[11.5px] uppercase tracking-[0.14em] text-ink/40">Google Yorumu</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Review 3 -->
+      <figure class="reveal lux-card flex flex-col rounded-3xl p-7" style="transition-delay:.16s">
+        <div class="flex items-center gap-0.5 text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+        </div>
+        <blockquote class="mt-4 flex-1 text-[14.5px] leading-relaxed text-ink/70">
+          "İpek kirpik uygulamasından çok memnun kaldım. Doğal ve tam istediğim gibi oldu.
+          Personelin ilgisi ve güler yüzü için teşekkürler."
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3 border-t border-ink/8 pt-5">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-rose font-display text-[14px] font-semibold text-ink">SK</span>
+          <span>
+            <span class="block text-[14px] font-semibold text-ink">Selin K.</span>
+            <span class="block text-[11.5px] uppercase tracking-[0.14em] text-ink/40">Google Yorumu</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Review 4 -->
+      <figure class="reveal lux-card flex flex-col rounded-3xl p-7" style="transition-delay:.24s">
+        <div class="flex items-center gap-0.5 text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.05 6.6.92-4.8 4.62 1.17 6.55L12 17.55 6.13 20.64l1.17-6.55-4.8-4.62 6.6-.92z"/></svg>
+        </div>
+        <blockquote class="mt-4 flex-1 text-[14.5px] leading-relaxed text-ink/70">
+          "Alsancak'ta bu kadar kaliteli hizmet alacağımı tahmin etmiyordum. Randevu süreci hızlı,
+          sonuçtan çok memnunum. Tekrar geleceğim."
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3 border-t border-ink/8 pt-5">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-nude/70 font-display text-[14px] font-semibold text-ink">BA</span>
+          <span>
+            <span class="block text-[14px] font-semibold text-ink">Buse A.</span>
+            <span class="block text-[11.5px] uppercase tracking-[0.14em] text-ink/40">Google Yorumu</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="reveal mt-10 text-center">
+      <a href="https://www.google.com/maps/search/?api=1&query=MJ+Beauty+Saloon+Alsancak+Izmir" target="_blank" rel="noopener"
+         class="btn btn-outline px-7 py-3.5 text-[13.5px]">
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+          <circle cx="12" cy="10" r="2.6"/>
+        </svg>
+        Tüm Google Yorumlarını Gör
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER / İLETİŞİM
+============================================ -->
+<footer id="iletisim" class="relative overflow-hidden bg-ink text-white">
+  <div class="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-rosegold/12 blur-3xl"></div>
+  <div class="pointer-events-none absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-16">
+
+      <!-- Brand -->
+      <div class="reveal">
+        <div class="flex items-center gap-3">
+          <span class="grid h-12 w-12 place-items-center rounded-full bg-white/6 ring-1 ring-gold/45">
+            <span class="font-display text-[16px] font-semibold text-gradient-gold">MJ</span>
+          </span>
+          <span>
+            <span class="block font-display text-[20px] font-semibold leading-tight">
+              <span class="text-gradient-gold">MJ</span> Beauty Saloon
+            </span>
+            <span class="block text-[10.5px] uppercase tracking-[0.28em] text-white/40">Alsancak · İzmir</span>
+          </span>
+        </div>
+        <p class="mt-6 max-w-sm text-[14.5px] leading-relaxed text-white/55">
+          İzmir Alsancak'ta; steril, ferah ve konforlu salonumuzda cilt bakımı, kalıcı makyaj,
+          kirpik tasarımı ve epilasyon hizmetleriyle doğal güzelliğinizi ortaya çıkarıyoruz.
+        </p>
+        <div class="mt-7 flex items-center gap-3">
+          <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener" aria-label="Instagram"
+             class="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:text-gold">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+              <circle cx="12" cy="12" r="4.1"/>
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5015510505" target="_blank" rel="noopener" aria-label="WhatsApp"
+             class="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:text-gold">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=MJ+Beauty+Saloon+Alsancak+Izmir" target="_blank" rel="noopener" aria-label="Haritada aç"
+             class="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/5 text-white/80 transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:text-gold">
+            <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="2.6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="reveal" style="transition-delay:.08s">
+        <h3 class="font-display text-[17px] font-semibold text-white">İletişim &amp; Lokasyon</h3>
+        <div class="mt-3 h-px w-14 gold-line"></div>
+
+        <ul class="mt-6 space-y-5 text-[14px]">
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/6 text-gold ring-1 ring-white/10">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="2.6"/>
+              </svg>
+            </span>
+            <span class="text-white/65">
+              <span class="block font-semibold text-white/90">Adres</span>
+              Alsancak, Konak / İzmir
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/6 text-gold ring-1 ring-white/10">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M6.5 3.5h2.2l1.6 4-1.8 1.3a12 12 0 0 0 5.7 5.7l1.3-1.8 4 1.6v2.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="text-white/65">
+              <span class="block font-semibold text-white/90">Telefon / WhatsApp</span>
+              <a href="tel:5015510505" class="transition-colors hover:text-gold">501 551 05 05</a>
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/6 text-gold ring-1 ring-white/10">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+                <circle cx="12" cy="12" r="4.1"/>
+                <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <span class="text-white/65">
+              <span class="block font-semibold text-white/90">Instagram</span>
+              <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener" class="transition-colors hover:text-gold">@mj.beauttyy</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hours + quick actions -->
+      <div class="reveal" style="transition-delay:.16s">
+        <h3 class="font-display text-[17px] font-semibold text-white">Çalışma Saatleri</h3>
+        <div class="mt-3 h-px w-14 gold-line"></div>
+        <ul class="mt-6 space-y-3 text-[14px] text-white/60">
+          <li class="flex items-center justify-between border-b border-white/8 pb-3">
+            <span>Pazartesi – Cumartesi</span><span class="font-semibold text-white/85">10:00 – 20:00</span>
+          </li>
+          <li class="flex items-center justify-between border-b border-white/8 pb-3">
+            <span>Pazar</span><span class="font-semibold text-white/85">Randevu ile</span>
+          </li>
+        </ul>
+
+        <div class="mt-7 flex flex-col gap-3">
+          <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+             class="btn btn-gold w-full py-3.5 text-[13.5px]">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+              <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+            </svg>
+            WhatsApp Randevu
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=MJ+Beauty+Saloon+Alsancak+Izmir" target="_blank" rel="noopener"
+             class="btn w-full border border-white/15 bg-white/5 py-3.5 text-[13.5px] text-white transition-all hover:-translate-y-0.5 hover:border-gold/60">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="2.6"/>
+            </svg>
+            Haritada Yol Tarifi Al
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
+      <p class="text-[12.5px] text-white/40">© <span id="year">2025</span> MJ Beauty Saloon · Tüm hakları saklıdır.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12.5px] text-white/45">
+        <a href="#hakkimizda" class="transition-colors hover:text-gold">Hakkımızda</a>
+        <a href="#hizmetler" class="transition-colors hover:text-gold">Hizmetler</a>
+        <a href="#yorumlar" class="transition-colors hover:text-gold">Yorumlar</a>
+        <a href="tel:5015510505" class="transition-colors hover:text-gold">501 551 05 05</a>
+      </div>
+    </div>
+
+    <!-- spacer for mobile bar -->
+    <div class="h-20 md:hidden"></div>
+  </div>
+</footer>
+
+<!-- ============================================
+     SABİT MOBİL ALT BAR
+============================================ -->
+<div id="mobileBar" class="fixed inset-x-0 bottom-0 z-50 md:hidden">
+  <div class="mx-3 mb-3 grid grid-cols-3 gap-2 rounded-2xl border border-ink/8 bg-white/92 p-2 shadow-[0_-8px_40px_-18px_rgba(43,35,42,.5)] backdrop-blur-xl">
+    <a href="https://wa.me/5015510505?text=Merhaba%20MJ%20Beauty%20Saloon%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener"
+       class="flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-br from-[#2B232A] to-[#3b3038] py-2.5 text-white active:scale-[.97] transition-transform">
+      <svg class="w-[19px] h-[19px] text-gold" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.348-.347.52-.52.174-.174.232-.298.347-.497.116-.198.058-.371-.058-.52-.116-.148-.52-1.253-.712-1.712-.19-.454-.383-.39-.523-.397l-.447-.008c-.149 0-.39.056-.594.28-.204.223-.78.762-.78 1.857 0 1.096.797 2.155.908 2.303.112.149 1.569 2.394 3.803 3.358.531.229.945.366 1.268.469.533.169 1.018.145 1.401.088.427-.064 1.316-.538 1.502-1.058.186-.52.186-.965.13-1.058-.056-.093-.204-.15-.502-.299z"/>
+        <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.98 11.98 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411m-8.475 18.29h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.996-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.884 9.884"/>
+      </svg>
+      <span class="text-[10.5px] font-semibold tracking-wide">WhatsApp</span>
+    </a>
+
+    <a href="https://www.instagram.com/mj.beauttyy/" target="_blank" rel="noopener"
+       class="flex flex-col items-center justify-center gap-1 rounded-xl border border-ink/8 bg-rose/70 py-2.5 text-ink active:scale-[.97] transition-transform">
+      <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/>
+        <circle cx="12" cy="12" r="4.1"/>
+        <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="text-[10.5px] font-semibold tracking-wide">Instagram</span>
+    </a>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=MJ+Beauty+Saloon+Alsancak+Izmir" target="_blank" rel="noopener"
+       class="flex flex-col items-center justify-center gap-1 rounded-xl border border-ink/8 bg-rose/70 py-2.5 text-ink active:scale-[.97] transition-transform">
+      <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 21.5s-7-6.2-7-11.2a7 7 0 1 1 14 0c0 5-7 11.2-7 11.2z" stroke-linejoin="round"/>
+        <circle cx="12" cy="10" r="2.6"/>
+      </svg>
+      <span class="text-[10.5px] font-semibold tracking-wide">Haritada Aç</span>
+    </a>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------- Year ---------------- */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------------- Header scroll state ---------------- */
+  var header = document.getElementById('siteHeader');
+  function updateHeader() {
+    if (window.scrollY > 24) {
+      header.classList.add('bg-white/85', 'backdrop-blur-xl', 'border-ink/8', 'shadow-[0_10px_40px_-28px_rgba(43,35,42,.7)]');
+      header.classList.remove('border-transparent');
+    } else {
+      header.classList.remove('bg-white/85', 'backdrop-blur-xl', 'border-ink/8', 'shadow-[0_10px_40px_-28px_rgba(43,35,42,.7)]');
+      header.classList.add('border-transparent');
+    }
+  }
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  /* ---------------- Mobile menu ---------------- */
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var bars = menuToggle ? menuToggle.querySelectorAll('.menu-bar') : [];
+
+  function openMenu() {
+    mobileMenu.classList.add('is-open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    bars[0].style.transform = 'translateY(6px) rotate(45deg)';
+    bars[1].style.opacity = '0';
+    bars[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    bars[0].style.transform = '';
+    bars[1].style.opacity = '';
+    bars[2].style.transform = '';
+  }
+  function toggleMenu() {
+    if (mobileMenu.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+  }
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', toggleMenu);
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { closeMenu(); });
+    });
+    document.addEventListener('click', function (e) {
+      if (!mobileMenu.classList.contains('is-open')) return;
+      if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1024) closeMenu();
+    });
+  }
+
+  /* ---------------- Mobile action bar show/hide ---------------- */
+  var mobileBar = document.getElementById('mobileBar');
+  var lastY = window.scrollY;
+  function handleBar() {
+    var y = window.scrollY;
+    var goingDown = y > lastY;
+    if (y > 340 && goingDown) {
+      mobileBar.classList.add('is-hidden');
+    } else {
+      mobileBar.classList.remove('is-hidden');
+    }
+    lastY = y;
+  }
+  if (mobileBar) {
+    window.addEventListener('scroll', handleBar, { passive: true });
+  }
+
+  /* ---------------- Reveal on scroll ---------------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------------- Active nav link on scroll ---------------- */
+  var navLinks = document.querySelectorAll('.nav-link');
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var href = link.getAttribute('href') || '';
+    if (href.charAt(0) === '#' && href.length > 1) {
+      var sec = document.querySelector(href);
+      if (sec) sections.push({ link: link, sec: sec });
+    }
+  });
+
+  function setActive() {
+    var pos = window.scrollY + 140;
+    var current = null;
+    sections.forEach(function (item) {
+      if (item.sec.offsetTop <= pos) current = item;
+    });
+    navLinks.forEach(function (l) { l.classList.remove('is-active'); });
+    if (current) current.link.classList.add('is-active');
+  }
+  if (sections.length) {
+    setActive();
+    window.addEventListener('scroll', setActive, { passive: true });
+  }
+
+  /* ---------------- Smooth anchor scroll (offset-safe) ---------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var headerH = header ? header.offsetHeight : 80;
+      var top = target.getBoundingClientRect().top + window.scrollY - headerH + 1;
+      window.scrollTo({
+        top: Math.max(top, 0),
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+      history.replaceState(null, '', id);
+    });
+  });
+})();
+</script>
+</body>
+</html>
